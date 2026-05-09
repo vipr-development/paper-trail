@@ -487,7 +487,7 @@ Optimize if needed:
 - [Installation](./installation) - User installation instructions
 - [Features](./features) - Feature overview and usage
 - [Configuration](./configuration) - Configuration options
-- [Phase Documentation](/feature-development/vscode-extension/) - Implementation phases
+- [Phase Documentation](../../feature-development/vscode-extension/) - Implementation phases
 
 ## Support
 

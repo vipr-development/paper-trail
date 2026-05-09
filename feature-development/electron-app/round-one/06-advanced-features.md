@@ -328,7 +328,7 @@ const criticalIssues = useAnalysisStore(
 
 **CRITICAL**: All Phase 4 features must implement security controls before production deployment. This section provides a high-level overview. For detailed implementation specifications, security testing requirements, and vulnerability remediation, see:
 
-**[Phase 4 Security Architecture (security documentation)](./security documentation)**
+**Phase 4 Security Architecture (security documentation in progress)**
 
 #### executive security summary
 

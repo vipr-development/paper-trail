@@ -232,6 +232,6 @@ When creating a new package or refactoring an existing one:
 
 ## Related Documentation
 
-- [Monorepo Barrel Exports Analysis](../archive/monorepo-barrel-exports-analysis.md)
-- [Plugin Architecture](../plugin-architecture.md)
+- [Monorepo Barrel Exports Analysis](./monorepo-barrel-exports-analysis.md)
+- [Plugin Architecture](../architecture/plugin-architecture.md)
 - [CLAUDE.md](https://github.com/jamesleebaker/vipr/blob/main/CLAUDE.md)

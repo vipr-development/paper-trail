@@ -15,8 +15,8 @@ This page will contain detailed performance optimization strategies for large co
 For now, see:
 
 - [Features Overview](../user-guide/overview) - Performance features
-- [Phase 20 Documentation](../../feature-development/vscode-extension/phase-20-performance-optimization) - Implementation details
-- [Extension Lifecycle Diagram](/feature-development/vscode-extension/diagrams/05-extension-lifecycle) - Performance metrics
+- [Phase 20 Documentation](../../../feature-development/vscode-extension/phase-20-performance-optimization.md) - Implementation details
+- [Extension Lifecycle Diagram](../../../feature-development/vscode-extension/diagrams/05-extension-lifecycle.md) - Performance metrics
 
 ## Current Features
 

@@ -35,4 +35,4 @@ Code-level testing including:
 
 ---
 
-**Navigate back to**: [VSCode Extension Documentation](/vscode/)
+**Navigate back to**: [VSCode Extension Documentation](../)

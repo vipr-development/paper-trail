@@ -24,7 +24,7 @@ Regression detection will identify when code quality degraded by:
 The foundation for regression detection is implemented in:
 
 - [SQLite Storage](./sqlite-storage) - Historical snapshots
-- [Phase 24 Documentation](../../feature-development/vscode-extension/phase-24-temporal-regression-detection) - Algorithm design
+- [Phase 24 Documentation](../../../feature-development/vscode-extension/phase-24-temporal-regression-detection.md) - Algorithm design
 
 ## Coming Soon
 
@@ -37,7 +37,7 @@ The foundation for regression detection is implemented in:
 
 - [SQLite Storage](./sqlite-storage)
 - [Git Integration](./git-integration)
-- [Git Integration Flow Diagram](/feature-development/vscode-extension/diagrams/03-git-integration-flow)
+- [Git Integration Flow Diagram](../../../feature-development/vscode-extension/diagrams/03-git-integration-flow.md)
 
 ---
 

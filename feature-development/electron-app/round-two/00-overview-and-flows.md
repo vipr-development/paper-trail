@@ -643,7 +643,7 @@ Every Round Two feature leverages this comprehensive metric set:
 | [01-blast-radius-hotspot-view.md](./01-blast-radius-hotspot-view.md)                                   | Blast Radius Hotspot View                       | UX-focused                |
 | [02-complexity-velocity-dashboard.md](./02-complexity-velocity-dashboard.md)                           | Complexity Velocity Dashboard                   | UX-focused                |
 | [03-churn-complexity-quadrant-analysis.md](./03-churn-complexity-quadrant-analysis.md)                 | Churn-Complexity Quadrant Analysis              | UX-focused                |
-| [04-architectural-anti-patterns-detection.md](./04-architectural-anti-patterns-detection.md)           | Architectural AntiPatterns Detection            | UX-focused                |
+| [04-architectural-smells-detection.md](./04-architectural-smells-detection.md)                         | Architectural AntiPatterns Detection            | UX-focused                |
 | [05-five-level-zoom-navigation.md](./05-five-level-zoom-navigation.md)                                 | Five-Level Zoom Navigation                      | UX-focused                |
 | [06-progressive-disclosure-expandable-insights.md](./06-progressive-disclosure-expandable-insights.md) | Progressive Disclosure with Expandable Insights | UX-focused                |
 | [07-dependency-cascade-analysis.md](./07-dependency-cascade-analysis.md)                               | Dependency Cascade Analysis                     | UX-focused                |

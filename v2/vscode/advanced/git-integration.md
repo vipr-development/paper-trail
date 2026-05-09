@@ -24,7 +24,7 @@ Git integration will provide:
 The foundation for git integration is implemented in:
 
 - [SQLite Storage](./sqlite-storage) - Historical data storage
-- [Phase 24 Documentation](../../feature-development/vscode-extension/phase-24-temporal-regression-detection) - Temporal analysis
+- [Phase 24 Documentation](../../../feature-development/vscode-extension/phase-24-temporal-regression-detection.md) - Temporal analysis
 
 ## Coming Soon
 
@@ -37,7 +37,7 @@ The foundation for git integration is implemented in:
 
 - [SQLite Storage](./sqlite-storage)
 - [Regression Detection](./regression-detection)
-- [Git Integration Flow Diagram](/feature-development/vscode-extension/diagrams/03-git-integration-flow)
+- [Git Integration Flow Diagram](../../../feature-development/vscode-extension/diagrams/03-git-integration-flow.md)
 
 ---
 

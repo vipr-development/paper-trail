@@ -1,136 +1,210 @@
 # Vipr Paper Trail
 
-This repository is the historical paper trail behind the development of the
-Vipr application ecosystem.
+This repository is the historical paper trail behind the Vipr ecosystem.
 
-It began as an archive inside the Vipr documentation tree. What lives here now
-is that archive separated into its own public record: hundreds of markdown files
-that show the work as it actually unfolded, through research notes, phased
-implementation plans, architecture decisions, audits, feature proposals,
-completion summaries, and operational guides.
+It began as an `archive/` folder inside the Vipr documentation tree. The archive
+has now been collapsed into the repository root so the documents can be read as a
+standalone record instead of a buried appendix. The thin archive landing page was
+removed; this README is the main index.
 
-The point of preserving it is not nostalgia. The point is to make the process
-visible.
+The value here is the path, not just the destination. These files show how Vipr
+grew from early complexity-analysis research into a broader product ecosystem:
+analyzers, CLI workflows, desktop surfaces, VS Code integration, MCP tooling,
+release infrastructure, QA loops, and operational guardrails.
 
-Vipr did not arrive as one large heroic rewrite. It grew through a repeated
-practice: define the next system boundary, assign focused agents to the work
-they were best suited for, make each phase small enough to verify, and keep the
-guardrails close to the code. Over time, that rhythm produced a monorepo that
-would grow past 750,000 lines of code across roughly 25 packages, with analyzers,
-clients, shared packages, documentation, desktop surfaces, editor integrations,
-MCP tooling, and release infrastructure all learning to work as one ecosystem.
+There are 384 historical Markdown documents plus this README.
 
-## What This Archive Contains
+## How To Read This
 
-The archive currently contains 385 markdown files extracted from
-`documentation/docs/archive.zip`.
+For the cleanest narrative, start with the early foundations, then move through
+the versioned planning tracks:
 
-At a high level, it includes:
+1. [`foundations/`](foundations/) - early scoring theory, testing priorities,
+   accessibility and security analysis, Turborepo research, and barrel-export
+   strategy.
+2. [`v1/`](v1/) - React analyzer theory, schema work, quick wins, and the first
+   implementation roadmap.
+3. [`v2/`](v2/) - the shift from a focused analyzer into a platform with CLI,
+   desktop, VS Code, QA, configuration, security, and release concerns.
+4. [`0.7.0/`](0.7.0/) - a core audit era focused on algorithm correctness,
+   maintainability metrics, concurrency, caching, edge cases, and property-based
+   testing.
+5. [`v3/`](v3/) - plugin architecture refactor planning and the split into
+   cleaner analysis units.
+6. [`v4/`](v4/) - formatter migration planning.
+7. [`feature-development/`](feature-development/) - the large feature tracks
+   that expanded Vipr into the desktop, editor, analyzer, and MCP ecosystem.
 
-- Early research and scoring theory for code complexity analysis.
-- Versioned planning tracks for major architecture shifts.
-- Core audit work around correctness, edge cases, concurrency, caching, and
-  maintainability metrics.
-- Feature-development tracks for React analysis, Next.js analysis, multi-file
-  analysis, VS Code integration, desktop work, and MCP integration.
-- Migration notes, plugin-development guidance, formatter plans, testing
-  strategy, and architecture references.
+The documents are intentionally historical. Some package names, paths, product
+choices, and assumptions reflect the moment when they were written.
 
-The documents are intentionally historical. Some paths, package names, and
-decisions reflect the state of Vipr at the time they were written. That is part
-of their value: this is not just the final architecture, but the trail of
-thinking that led there.
+## Narrative Map
 
-## How To Read It
+| Chapter | Documents | What it captures |
+| --- | ---: | --- |
+| [`foundations/`](foundations/) | 14 | Early complexity, testing, security, accessibility, package-boundary, and Turborepo research |
+| [`v1/`](v1/) | 9 | Initial React analyzer theory, JSON schema, roadmap, research, and enhancement strategy |
+| [`v2/`](v2/) | 111 | Platform expansion across CLI, desktop, VS Code, QA, security, configuration, and release operations |
+| [`0.7.0/`](0.7.0/) | 17 | Core analyzer audit, correctness validation, maintainability index work, and interactive CLI notes |
+| [`v3/`](v3/) | 9 | Plugin system refactor and implementation phases |
+| [`v4/`](v4/) | 2 | Formatter migration planning |
+| [`feature-development/`](feature-development/) | 208 | Deep feature tracks for analyzers, desktop, VS Code, MCP, and multi-file analysis |
+| [`architecture/`](architecture/) | 2 | Historical architecture and plugin architecture references |
+| [`guides/`](guides/) | 3 | Migration and plugin-development guides |
+| [`vscode-extension/`](vscode-extension/) | 9 | Earlier standalone VS Code extension phase specs |
 
-Start with the archive index:
-
-- [`archive/index.md`](archive/index.md)
-
-Then follow one of the larger arcs:
-
-- [`archive/v1/`](archive/v1/) for the early theory, schema, and roadmap work.
-- [`archive/v2/phase-index.md`](archive/v2/phase-index.md) for the shift from a
-  focused analyzer into a broader analysis platform.
-- [`archive/v3/summary.md`](archive/v3/summary.md) for the plugin architecture
-  refactor that broke the monolith into parallelizable analysis units.
-- [`archive/0.7.0/core-audit/`](archive/0.7.0/core-audit/) for the audit trail
-  around algorithmic correctness and reliability.
-- [`archive/feature-development/`](archive/feature-development/) for the later
-  feature tracks that expanded Vipr into a fuller product ecosystem.
-
-If you want the most direct view into the operating model, look for documents
-that include phase dependency graphs, acceptance criteria, assigned agents,
-model-selection notes, and completion summaries. Those are the places where the
-process is most visible.
-
-## The Development Pattern
-
-The recurring pattern is simple, but it compounds.
-
-First, the work is turned into a map. A feature is not treated as a vague desire.
-It becomes phases, dependency graphs, risks, acceptance criteria, and explicit
-handoff points.
-
-Second, agents are used as collaborators with roles, not as a pile of generic
-automation. Some agents investigate. Some implement. Some test. Some document.
-Some specialize in TypeScript, React, VS Code, architecture, package systems, or
-quality analysis. The value is not that many agents run at once. The value is
-that each agent has a clear surface area and a clear definition of done.
-
-Third, guardrails are written down while the system is still forming. The docs
-do not sit outside the product. They become part of how the product remembers
-what it is trying to protect: plugin boundaries, presenter registration,
-testing expectations, migration paths, package contracts, accessibility
-expectations, and failure modes discovered along the way.
-
-Finally, the codebase is allowed to become symbiotic. The CLI, analyzers,
-desktop client, VS Code extension, documentation, shared packages, and MCP tools
-are not isolated efforts. Each new surface feeds constraints and insight back
-into the others. The product becomes stronger because its parts keep teaching
-one another.
-
-That is the deeper story in these files. The archive is full of implementation
-detail, but underneath the detail is a practice: use structure to make ambition
-safer, use agents to widen the field of view, and use documentation to keep the
-system honest as it grows.
-
-## Why This Matters
-
-Large software systems often hide the path that made them possible. They show
-the finished interfaces, the package graph, the release notes, and the current
-architecture, but not the messy middle where the important judgment happened.
-
-This repository keeps that middle visible.
-
-It shows how a product can be developed through conversation with its own
-constraints. It shows how phase-based planning can reduce uncertainty without
-freezing creativity. It shows how agentic development works best when it is not
-just speed, but disciplined collaboration: investigation before implementation,
-guardrails before scale, verification before confidence.
-
-Vipr is a code-analysis ecosystem, but this archive is also a record of a way of
-working. The work is technical, but the lesson is human: complex things become
-possible when the process is clear enough for many minds, human and artificial,
-to contribute without losing the thread.
-
-## Repository Layout
+## Root Tree
 
 ```text
-archive/
-  0.7.0/                Core audit and release-era planning
-  architecture/         Historical architecture references
-  feature-development/  Feature tracks for analyzers, clients, MCP, and editor work
-  guides/               Historical migration and plugin-development guides
-  v1/                   Early research, schema, and implementation roadmap
-  v2/                   Platform expansion and phase planning
-  v3/                   Plugin architecture refactor
-  v4/                   Formatter migration planning
+.
+├── README.md
+├── 0.7.0/
+│   ├── clacky/
+│   └── core-audit/
+├── architecture/
+├── feature-development/
+│   ├── electron-app/
+│   ├── in-depth-nextjs-analysis/
+│   ├── in-depth-react-analysis/
+│   ├── mcp-server/
+│   ├── multi-file-analysis/
+│   ├── nextjs-analyzer/
+│   └── vscode-extension/
+├── foundations/
+├── guides/
+├── v1/
+├── v2/
+├── v3/
+├── v4/
+└── vscode-extension/
 ```
+
+## Foundations
+
+Start here when you want the earliest signals: what Vipr chose to measure, how
+testing priorities were framed, and how package boundaries began to matter.
+
+- [`foundations/complexity-analysis-index.md`](foundations/complexity-analysis-index.md)
+  is the original index for the complexity-analysis set.
+- [`foundations/testing-summary.md`](foundations/testing-summary.md),
+  [`foundations/testing-roadmap.md`](foundations/testing-roadmap.md), and
+  [`foundations/testing-priority-checklist.md`](foundations/testing-priority-checklist.md)
+  describe the early test strategy.
+- [`foundations/complexity-matrix.md`](foundations/complexity-matrix.md) and
+  [`foundations/complexity-analysis-and-testing-priorities.md`](foundations/complexity-analysis-and-testing-priorities.md)
+  explain risk and prioritization.
+- [`foundations/security-analyzer-metrics.md`](foundations/security-analyzer-metrics.md)
+  and [`foundations/accessibility-analysis-enhancements.md`](foundations/accessibility-analysis-enhancements.md)
+  show early analyzer expansion beyond complexity.
+- [`foundations/monorepo-barrel-exports-analysis.md`](foundations/monorepo-barrel-exports-analysis.md),
+  [`foundations/barrel-export-strategy.md`](foundations/barrel-export-strategy.md),
+  and [`foundations/barrel-exports-quick-reference.md`](foundations/barrel-exports-quick-reference.md)
+  trace package API and module-boundary cleanup.
+- [`foundations/turborepo-clean-research.md`](foundations/turborepo-clean-research.md)
+  captures early build-system cleanup research.
+
+## Versioned Evolution
+
+- [`v1/index.md`](v1/index.md) - early React analyzer planning.
+- [`v1/theory.md`](v1/theory.md) - theoretical foundation for React complexity.
+- [`v1/schema.md`](v1/schema.md) and
+  [`v1/schema-implementation.md`](v1/schema-implementation.md) - JSON schema
+  documentation and implementation summary.
+- [`v1/implementation-roadmap.md`](v1/implementation-roadmap.md) - first roadmap.
+- [`v2/index.md`](v2/index.md) - platform-era documentation home.
+- [`v2/phase-index.md`](v2/phase-index.md) - the main v2 implementation phase
+  map.
+- [`v2/architecture.md`](v2/architecture.md) and
+  [`v2/plugin-architecture.md`](v2/plugin-architecture.md) - architecture
+  references.
+- [`v3/index.md`](v3/index.md) and [`v3/summary.md`](v3/summary.md) - plugin
+  refactor overview and architecture summary.
+- [`v4/index.md`](v4/index.md) and
+  [`v4/formatter-migration-plan.md`](v4/formatter-migration-plan.md) - formatter
+  migration planning.
+
+## v2 Subsystems
+
+The v2 folder is the broadest platform snapshot. It is best read as a hub with
+specialized branches:
+
+- [`v2/cli/`](v2/cli/) - CLI commands, configuration, and usage.
+- [`v2/desktop/`](v2/desktop/) - desktop installation, configuration, and feature
+  docs.
+- [`v2/vscode/`](v2/vscode/) - VS Code installation, user guide, testing, and
+  advanced features.
+- [`v2/testing/`](v2/testing/) - test coverage, presenter testing, and
+  optimization.
+- [`v2/qa/`](v2/qa/) - QA harness notes and LOC verification.
+- [`v2/security/`](v2/security/) - CSP and desktop security cleanup.
+- [`v2/audits/`](v2/audits/) - Electron best-practices audit and implementation
+  summary.
+- [`v2/research/`](v2/research/) - empirical repository-size research.
+- [`v2/infrastructure/`](v2/infrastructure/) - update strategy.
+- [`v2/fixes/`](v2/fixes/) - targeted regression and data-drift fixes.
+
+## Feature Development Tracks
+
+The feature-development tree is the largest part of the archive. It records the
+major product-growth tracks after the early analyzer work had a shape.
+
+- [`feature-development/electron-app/`](feature-development/electron-app/) - six
+  rounds of desktop product planning, from first user stories through historical
+  analysis, velocity intelligence, widgets, backfill performance, and release
+  setup.
+- [`feature-development/in-depth-react-analysis/`](feature-development/in-depth-react-analysis/)
+  - research, audits, phased improvements, implementation summaries, and final
+  reports for React analyzer depth.
+- [`feature-development/nextjs-analyzer/`](feature-development/nextjs-analyzer/)
+  and [`feature-development/in-depth-nextjs-analysis/`](feature-development/in-depth-nextjs-analysis/)
+  - Next.js detection, server/client analysis, data fetching, migration,
+  security, performance, accessibility, and CLI integration.
+- [`feature-development/multi-file-analysis/`](feature-development/multi-file-analysis/)
+  - batch analysis types, aggregation, presenters, formatters, and interactive
+  mode.
+- [`feature-development/vscode-extension/`](feature-development/vscode-extension/)
+  - the later VS Code implementation track with diagrams, diagnostics, CodeLens,
+  dashboards, storage, language model tooling, publishing, and performance.
+- [`feature-development/mcp-server/`](feature-development/mcp-server/) - MCP
+  server planning, tools, resources, prompts, pipeline integration, and testing.
+
+## Product Surfaces
+
+Use these branches when you are looking for product-facing behavior rather than
+platform chronology:
+
+- CLI: [`0.7.0/clacky/`](0.7.0/clacky/), [`v2/cli/`](v2/cli/), and
+  [`feature-development/multi-file-analysis/06-interactive-mode.md`](feature-development/multi-file-analysis/06-interactive-mode.md).
+- Desktop: [`v2/desktop/`](v2/desktop/) and
+  [`feature-development/electron-app/`](feature-development/electron-app/).
+- VS Code: [`vscode-extension/`](vscode-extension/),
+  [`v2/vscode/`](v2/vscode/), and
+  [`feature-development/vscode-extension/`](feature-development/vscode-extension/).
+- MCP: [`feature-development/mcp-server/`](feature-development/mcp-server/).
+- Analyzer architecture: [`architecture/`](architecture/),
+  [`v2/analyzers/`](v2/analyzers/), [`v3/`](v3/), and
+  [`feature-development/nextjs-analyzer/`](feature-development/nextjs-analyzer/).
+
+## Operating Lessons
+
+Across the archive, the same development rhythm shows up again and again:
+
+- Turn uncertainty into phases, acceptance criteria, and explicit handoff
+  points.
+- Keep investigation, implementation, testing, and documentation as distinct
+  kinds of work.
+- Write guardrails while the system is forming, not after the system is already
+  too large to explain.
+- Let the CLI, analyzers, desktop app, editor integration, documentation, and
+  MCP tooling teach one another.
+
+That is the deeper story in these files. Vipr is a code-analysis ecosystem, but
+this repository is also a record of a working practice: make ambition legible,
+make change reviewable, and keep the trail clear enough that another mind can
+pick it up later without losing the plot.
 
 ## Provenance
 
-The markdown files in this repository were extracted from
-`documentation/docs/archive.zip` in the Vipr monorepo. macOS metadata files and
-non-markdown archive contents were intentionally left out so this repository can
-focus on the historical documentation itself.
+These Markdown files were extracted from `documentation/docs/archive.zip` in the
+Vipr monorepo. macOS metadata files and non-Markdown archive contents were left
+out so this repository can focus on the historical documentation itself.
