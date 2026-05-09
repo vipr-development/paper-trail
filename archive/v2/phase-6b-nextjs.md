@@ -1,0 +1,1 @@
+- Post monorepo, expand to have a Next.js analyzer that uses the common and React analyzers but adds its own as well.

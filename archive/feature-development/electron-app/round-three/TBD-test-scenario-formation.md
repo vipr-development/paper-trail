@@ -1,0 +1,1 @@
+# TODO: Need an LLM to crawl the codebase and all feature-development docs to identify what is actually available and write smoke testing for a user. We need to consider that we'll be working with repositories that will be moving through git history, so we need to guide the user on what to do and what to change (i.e., user flows) to ensure features are functional.
