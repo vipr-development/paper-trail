@@ -48,7 +48,7 @@ choices, and assumptions reflect the moment when they were written.
 | [`0.7.0/`](0.7.0/) | 17 | Core analyzer audit, correctness validation, maintainability index work, and interactive CLI notes |
 | [`v3/`](v3/) | 9 | Plugin system refactor and implementation phases |
 | [`v4/`](v4/) | 2 | Formatter migration planning |
-| [`feature-development/`](feature-development/) | 208 | Deep feature tracks for analyzers, desktop, VS Code, MCP, and multi-file analysis |
+| [`feature-development/`](feature-development/) | 228 | Deep feature tracks for analyzers, desktop, VS Code, MCP, and multi-file analysis |
 | [`architecture/`](architecture/) | 2 | Historical architecture and plugin architecture references |
 | [`guides/`](guides/) | 3 | Migration and plugin-development guides |
 | [`vscode-extension/`](vscode-extension/) | 9 | Earlier standalone VS Code extension phase specs |
@@ -148,10 +148,11 @@ specialized branches:
 The feature-development tree is the largest part of the archive. It records the
 major product-growth tracks after the early analyzer work had a shape.
 
-- [`feature-development/electron-app/`](feature-development/electron-app/) - six
+- [`feature-development/electron-app/`](feature-development/electron-app/) - seven
   rounds of desktop product planning, from first user stories through historical
-  analysis, velocity intelligence, widgets, backfill performance, and release
-  setup.
+  analysis, velocity intelligence, widgets, backfill performance, release
+  setup, and the consolidated perf + storage + analyzer-owned-documentation
+  trifecta.
 - [`feature-development/in-depth-react-analysis/`](feature-development/in-depth-react-analysis/)
   - research, audits, phased improvements, implementation summaries, and final
   reports for React analyzer depth.
